@@ -1,0 +1,91 @@
+Појаснување: Некои од командиде ( од 4-11 ) во логовите недостасуваат бидејќи го имав исклучено првичниот прозорец од терминалот 
+а потоа екпиремитирав и со shortcuts од InteliJ UI!!
+
+
+1.
+2.
+3.
+
+4.git init 
+
+5.git remote add origin https://github.com/StojchevskiN/SI_2024_186081.git  и  git pull 
+( Првично автентицирање на корисник а потоа повлекување на master гранката од оддалечениот репозиториум ) 
+
+6.git add README.md  и  git commit -m 'Initial commit'  
+( Додавање на README.md во локалниот репозиториум, и задавање наслов на commit ) 
+
+7.git add --all  и  git commit -m 'Add starter code' 
+( Додавање на сите нови податоци од локалниот во оддалечениот репозиториум и додавање на наслов на нивниот commit )
+
+8.git push
+( Синхронизација на двата репозиториуми )
+
+9.git branch bug1  и  git branch bug2 
+( Додавање на нови гранки во локалниот репозиториум )
+
+10.git checkout bug1
+( Промена на моменталната гранка )
+
+11.git commit -m 'Fix wrong condition in filterOddLengthStrings'
+( Додавање на нов commit за поправените грешки во кодот )
+
+12.git checkout bug2
+( Промена на моменталната гранка )
+
+13.git commit -m 'Fix wrong condition in makeBigStringFrom.'
+( Додавање на нов commit за поправените грешки во кодот )
+
+14.git checkout bug1
+( Промена на моменталната гранка )
+
+15.git commit -m 'Call method filterOddLengthStrings in main class'
+( Додавање на нов commit за промената во кодот )
+
+16.git checkout bug2
+( Промена на моменталната гранка )
+
+17.git commit -m 'Call method makeBigStringFrom in main class'
+( Додавање на нов commit за промената во кодот )
+
+18.git push
+( Синхронизација на двата репозиториуми )
+
+19.git checkout master
+( Промена на моменталната гранка )
+
+20.git merge bug1
+( Спојување на гранката bug1 со гранката master )
+
+21.git push
+( Синхронизација на двата репозиториуми )
+
+22.git checkout bug2
+( Промена на моменталната гранка )
+
+23.git rebase master  и  git push --force
+( Промена на историјата на bug2 )
+
+24.git checkout master
+( Промена на моменталната гранка )
+
+25.git merge bug2 ( Овој чекор го имам направено преку pull request на GitHub )  
+( Спојување на гранката bug1 со гранката master )
+
+26.git push 
+( Синхронизација на двата репозиториуми )
+
+27.git add --all
+( Додавање на ново создадените документи во оддалечениот репозиториум )
+
+28.git commit -m 'Final commit'
+( додавање на наслов на нивниот commit )
+
+29.git push
+( Синхронизација на двата репозиториуми )
+
+30.
+31.
+32.
+33.
+34.
+35.

@@ -1,0 +1,167 @@
+S C:\REPOSITORIES\SI_2024_186081> git checkout bug1
+M       SILab1_1.java
+Switched to branch 'bug1'
+PS C:\REPOSITORIES\SI_2024_186081> git branch
+* bug1
+  master
+PS C:\REPOSITORIES\SI_2024_186081> git commit -m 'Fix wrong condition in filterOddLengthStrings' 
+On branch bug1
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_1.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+PS C:\REPOSITORIES\SI_2024_186081> touch .gitignore 
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that  
+the path is correct and try again.
+At line:1 char:1
++ touch .gitignore
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\REPOSITORIES\SI_2024_186081> git commit -m 'Fix wrong condition in filterOddLengthStrings'
+On branch bug1
+Changes not staged for commit:
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_1.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\REPOSITORIES\SI_2024_186081> git commit -m 'Fix wrong condition in filterOddLengthStrings'
+[bug1 8bfcebf] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+)
+PS C:\REPOSITORIES\SI_2024_186081> git checkout bug2
+error: pathspec 'bug2' did not match any file(s) known to git                                                                                                             
+Switched to a new branch 'bug2'
+git: 'chechout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+PS C:\REPOSITORIES\SI_2024_186081> git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS C:\REPOSITORIES\SI_2024_186081> git checkout -b bug2
+Switched to a new branch 'bug2'
+PS C:\REPOSITORIES\SI_2024_186081> git commit -m 'Fix wrong condition in filterOddLengthStrings'
+On branch bug2
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1_2.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+PS C:\REPOSITORIES\SI_2024_186081> git push                                                     
+
+    git push --set-upstream origin bug2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\REPOSITORIES\SI_2024_186081> git push -set-upstream origin bug2 
+error: did you mean `--set-upstream` (with two dashes)?
+PS C:\REPOSITORIES\SI_2024_186081> git config --global push.default current
+PS C:\REPOSITORIES\SI_2024_186081> git push                                
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/StojchevskiN/SI_2024_186081/pull/new/bug2
+remote:
+To https://github.com/StojchevskiN/SI_2024_186081.git
+ * [new branch]      bug2 -> bug2
+PS C:\REPOSITORIES\SI_2024_186081> git config --global push.default current
+PS C:\REPOSITORIES\SI_2024_186081> git push                                
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Writing objects: 100% (6/6), 789 bytes | 789.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:
+To https://github.com/StojchevskiN/SI_2024_186081.git
+ * [new branch]      bug1 -> bug1
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/StojchevskiN/SI_2024_186081.git
+   2e41dd1..d65fd5a  master -> master
+Updating d65fd5a..4d65c04
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+PS C:\REPOSITORIES\SI_2024_186081> git push 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/StojchevskiN/SI_2024_186081.git
+   d65fd5a..4d65c04  master -> master
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply 213bf4c... Call method makeBigStringFrom in main class
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 213bf4c... Call method makeBigStringFrom in main class
+PS C:\REPOSITORIES\SI_2024_186081> git add SILab1Main.java 
+PS C:\REPOSITORIES\SI_2024_186081> git rebase --continue
+[detached HEAD 43fca04] Call method makeBigStringFrom in main class
+Successfully rebased and updated refs/heads/bug2.
+To https://github.com/StojchevskiN/SI_2024_186081.git
+ ! [rejected]        bug2 -> bug2 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/StojchevskiN/SI_2024_186081.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\REPOSITORIES\SI_2024_186081> git force push
+git: 'force' is not a git command. See 'git --help'.
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 684 bytes | 684.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/StojchevskiN/SI_2024_186081.git
+ + 213bf4c...43fca04 bug2 -> bug2 (forced update)
+PS C:\REPOSITORIES\SI_2024_186081> git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 891 bytes | 74.00 KiB/s, done.
+From https://github.com/StojchevskiN/SI_2024_186081
+   4d65c04..2b7fb92  master     -> origin/master
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> bug2
+
+PS C:\REPOSITORIES\SI_2024_186081> git fetch
+PS C:\REPOSITORIES\SI_2024_186081> 

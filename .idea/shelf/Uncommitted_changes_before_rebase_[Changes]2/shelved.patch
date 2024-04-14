@@ -1,0 +1,19 @@
+Index: SILab1_2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.List;\r\n\r\npublic class SILab1_2 {\r\n\r\n    private static String makeBigStringFrom (List<String> list, int minLength) {\r\n        StringBuilder sb = new StringBuilder();\r\n        for (String el : list) {\r\n            if (el.length() < minLength) {\r\n                sb.append(el);\r\n            }\r\n        }\r\n        return sb.toString();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SILab1_2.java b/SILab1_2.java
+--- a/SILab1_2.java	(revision d65fd5ad8d43c67e51ae0bb377eec8abf3583975)
++++ b/SILab1_2.java	(date 1713109814616)
+@@ -5,7 +5,7 @@
+     private static String makeBigStringFrom (List<String> list, int minLength) {
+         StringBuilder sb = new StringBuilder();
+         for (String el : list) {
+-            if (el.length() < minLength) {
++            if (el.length() >= minLength) {
+                 sb.append(el);
+             }
+         }
